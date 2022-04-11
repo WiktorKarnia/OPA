@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    todos: [
+                    'drink', 
+                    'eat', 
+                    'sleep',
+                    'code',
+                    'repeat'
+                    ]
+                }
+            }
+        })
+    </script>
+</head>
+<body>
+    <div id="app" style="margin: 30px">
+        <h2>DO WYKONANIA</h2>
+        <ol>
+            <li v-for="todo in todos" style="margin-bottom: 5px; font-size: 18px">
+                {{ todo }}
+            </li>
+        </ol>
+    </div>
+    <script>
+        const mountedApp = app.mount('#app')
+    </script>
+</body>
+</html>

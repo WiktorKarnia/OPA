@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    product: 'book',
+                    unitPrice: '17 zł',
+                    quantity: 3,
+                    amount: '51 zł',
+                    taxRate: '23%',
+                    total: '62.73 zł'
+                }
+            }
+        })
+    </script>
+</head>
+<body>
+    <div id="app" style="margin: 30px">
+        <h3 style="font-weight: bold">RECEIPT</h3>
+        <p style="font-weight: bold">--------------------------</p>
+        <p>Product: {{product}}</p>
+        <p>Unit Price: {{unitPrice}}</p>
+        <p>Quantity: {{quantity}}</p>
+        <p>Amount: {{amount}}</p>
+        <p>VAT Tax Rate: {{taxRate}}</p>
+        <p style="font-weight: bold">================</p>
+        <p style="font-weight: bold">Total: {{total}}</p>
+    <!-- Mount app -->
+    <script>
+        const mountedApp = app.mount('#app')
+    </script>
+</body>
+</html>
