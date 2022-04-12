@@ -20,13 +20,13 @@
                     var height = parseInt(this.height) / 100;
                     var bmi = weight / (height * height)
                     if(bmi < 18.5) {
-                      return 'Niskie: ' + bmi.toFixed(2) + ' kg/m2';
+                      return 'niskie: ' + bmi.toFixed(2) + ' kg/m2';
                     }
-                    else if (bmi >=18.5 && bmi <24.9 ) {
-                      return 'Odpowiednie: ' + bmi.toFixed(2) + ' kg/m2';
+                    else if (bmi >=18.5 && bmi <25 ) {
+                      return 'odpowiednie: ' + bmi.toFixed(2) + ' kg/m2';
                     }
                     else if (bmi >=25 ) {
-                      return 'Wysokie: ' + bmi.toFixed(2) + ' kg/m2';
+                      return 'wysokie: ' + bmi.toFixed(2) + ' kg/m2';
                     }
                 }
             }   
